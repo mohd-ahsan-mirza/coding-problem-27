@@ -1,6 +1,7 @@
 class CodingProblem27:
 	def __init__(self,query):
 		self.query = query
+		self.originalQuery = self.query
 		self.brackets = {
 			"(" : ")",
 			"[" : "]",
@@ -8,6 +9,8 @@ class CodingProblem27:
 		}
 		self.matchingBraketsPossibleIndexes = range(1,(len(self.query))/2+1)
 		self.matchingBraketsPossibleIndexes = [x * 2 - 1 for x in self.matchingBraketsPossibleIndexes]
+	def getBracketQuery(self):
+		return self.originalQuery
 	def isQueryLengthEven(self):
 		if len(self.query) % 2 == 0:
 			return True
@@ -15,7 +18,7 @@ class CodingProblem27:
 			return False
 	def findMatchingBracketAtPossibleIndex(self,bracket):
 		#print("Bracket passed in find matching bracket -> "+bracket);
-		matchingBracket = self.brackets[bracket]
+		matchingBracket = self.brackets.get(bracket,"")
 		for run in range(len(self.matchingBraketsPossibleIndexes)):
 			if(matchingBracket == self.query[self.matchingBraketsPossibleIndexes[run]]):
 				return self.matchingBraketsPossibleIndexes[run]

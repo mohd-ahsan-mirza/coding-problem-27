@@ -1,22 +1,66 @@
 from module import *
 
-cp1 = CodingProblem27("([])[]({})")
-if(cp1.checkIfBracketsBalanced() == 1 ):
-    print("CP1 SHOULD Pass")
+cp = CodingProblem27("([])[]({})")
+if(cp.checkIfBracketsBalanced() == 1 ):
+    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
 else:
-    print("ERROR: CP1 SHOUDN'T HAVE Failed")
+    print(cp.getBracketQuery + " SHOUDN'T HAVE FAILED")
 
-cp2 = CodingProblem27("([)]")
-if(cp2.checkIfBracketsBalanced() == 0):
-    print("CP2 SHOULD FAIL")
+cp = CodingProblem27("([)]")
+if(cp.checkIfBracketsBalanced() == 0):
+    print(cp.getBracketQuery() + " FAILED AS EXPECTED")
 else:
-    print("CP2 SHOULDN'T HAVE PASSED")
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
 
-cp3 = CodingProblem27("((()")
-if(cp3.checkIfBracketsBalanced() == 0):
-    print("CP3 SHOULD FAIL")
+cp = CodingProblem27("((()")
+if(cp.checkIfBracketsBalanced() == 0):
+    print(cp.getBracketQuery() + " FAILED AS EXPECTED")
 else:
-    print("CP3 SHOULDN'T HAVE PASSED")
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
+
+cp = CodingProblem27("{[()]}")
+if(cp.checkIfBracketsBalanced() == 1 ):
+    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
+else:
+    print(cp.getBracketQuery + " SHOUDN'T HAVE FAILED")
+
+cp = CodingProblem27("{[(])}")
+if(cp.checkIfBracketsBalanced() == 0):
+    print(cp.getBracketQuery() + " FAILED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
+
+cp = CodingProblem27("{{[[(())]]}}")
+if(cp.checkIfBracketsBalanced() == 1):
+    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE FAILED")
+
+cp = CodingProblem27("][][")
+if(cp.checkIfBracketsBalanced() == 0):
+    print(cp.getBracketQuery() + " FAILED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
+
+cp = CodingProblem27("[[][]]")
+if(cp.checkIfBracketsBalanced() == 1):
+    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE FAILED")
+
+cp = CodingProblem27("[]()()(((([])))")
+if(cp.checkIfBracketsBalanced() == 0):
+    print(cp.getBracketQuery() + " FAILED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
+
+cp = CodingProblem27("[](){{{[]}}}")
+if(cp.checkIfBracketsBalanced() == 1):
+    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
+else:
+    print(cp.getBracketQuery() + " SHOULDN'T HAVE FAILED")
+
+
 
 
 
