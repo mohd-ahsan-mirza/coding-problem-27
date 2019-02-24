@@ -5,3 +5,5 @@ Given a string of round, curly, and square open and closing brackets, return whe
 For example, given the string "([])[]({})", you should return true.
 
 Given the string "([)]" or "((()", you should return false.
+
+Run the driver.py file to execute the program
