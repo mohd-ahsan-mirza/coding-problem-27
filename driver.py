@@ -54,12 +54,6 @@ if(cp.checkIfBracketsBalanced() == 0):
 else:
     print(cp.getBracketQuery() + " SHOULDN'T HAVE PASSED")
 
-cp = CodingProblem27("[](){{{[]}}}")
-if(cp.checkIfBracketsBalanced() == 1):
-    print(cp.getBracketQuery() + " PASSED AS EXPECTED")
-else:
-    print(cp.getBracketQuery() + " SHOULDN'T HAVE FAILED")
-
 
 
 
